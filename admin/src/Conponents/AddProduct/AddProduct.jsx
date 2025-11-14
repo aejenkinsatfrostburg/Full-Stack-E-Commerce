@@ -49,7 +49,7 @@ const AddProduct = () => {
             if (mainFile) {
                 const mainForm = new FormData();
                 mainForm.append('product', mainFile);
-                const mainResp = await fetch('http://localhost:4000/upload', { method: 'POST', body: mainForm });
+                const mainResp = await fetch('https://graffiti-streetwear-backend.onrender.com/upload', { method: 'POST', body: mainForm });
                 const mainData = await mainResp.json();
                 if (mainData.success) mainImageUrl = mainData.image_url;
             }
@@ -59,7 +59,7 @@ const AddProduct = () => {
             for (let file of sideFiles) {
                 const sideForm = new FormData();
                 sideForm.append('product', file);
-                const sideResp = await fetch('http://localhost:4000/upload', { method: 'POST', body: sideForm });
+                const sideResp = await fetch('https://graffiti-streetwear-backend.onrender.com/upload', { method: 'POST', body: sideForm });
                 const sideData = await sideResp.json();
                 if (sideData.success) sideImageUrls.push(sideData.image_url);
             }
@@ -72,7 +72,7 @@ const AddProduct = () => {
             };
 
             // Send product to backend
-            const addResp = await fetch('http://localhost:4000/addproduct', {
+            const addResp = await fetch('https://graffiti-streetwear-backend.onrender.com/addproduct', {
                 method: 'POST',
                 headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
                 body: JSON.stringify(product)
