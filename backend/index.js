@@ -1,4 +1,4 @@
-const port = process.env.PORT || 4000;
+const port = 4000;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection with MongoDB
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect("mongodb+srv://abbeyjenkins102_db_user:KingdomOfNight_73@cluster0.zbkl26x.mongodb.net/e-commerce");
 
 
 // API Creation
@@ -39,7 +39,7 @@ app.use('/images', express.static('upload/images'))
 app.post("/upload", upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `https://graffiti-streetwear.onrender.com/images/${req.file.filename}`
+        image_url: `http://localhost:4000/images/${req.file.filename}`
     })
 })
 

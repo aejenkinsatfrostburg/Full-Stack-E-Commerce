@@ -7,7 +7,7 @@ export const RelatedProducts = ({ product }) => {
 
   useEffect(() => {
     // Fetch all products from backend
-    fetch('https://graffiti-streetwear.onrender.com/allproducts')
+    fetch('http://localhost:4000/allproducts')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error(err));

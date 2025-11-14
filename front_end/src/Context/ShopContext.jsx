@@ -17,12 +17,12 @@ export const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('https://graffiti-streetwear.onrender.com/allproducts')
+        fetch('http://localhost:4000/allproducts')
             .then((response) => response.json())
             .then((data) => setAll_Product(data))
 
         if (localStorage.getItem('auth-token')) {
-            fetch('https://graffiti-streetwear.onrender.com/getcart', {
+            fetch('http://localhost:4000/getcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -38,7 +38,7 @@ export const ShopContextProvider = (props) => {
     const addToCart = (itemID) => {
         setCartItems((prev) => ({ ...prev, [itemID]: prev[itemID] + 1 }))
         if (localStorage.getItem('auth-token')) {
-            fetch('https://graffiti-streetwear.onrender.com/addtocart', {
+            fetch('http://localhost:4000/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -55,7 +55,7 @@ export const ShopContextProvider = (props) => {
     const removeFromCart = (itemID) => {
         setCartItems((prev) => ({ ...prev, [itemID]: prev[itemID] - 1 }))
         if (localStorage.getItem('auth-token')) {
-            fetch('https://graffiti-streetwear.onrender.com/removefromcart', {
+            fetch('http://localhost:4000/removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
