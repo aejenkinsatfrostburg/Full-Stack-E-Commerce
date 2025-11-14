@@ -23,7 +23,7 @@ export const LoginSignup = () => {
     }
 
     let responseData;
-    await fetch('https://graffiti-streetwear-frontend.onrender.com/login', {
+    await fetch('https://graffiti-streetwear-backend.onrender.com/login', {
       method: 'POST',
       headers: {
         Accept: 'application/form-data',
@@ -49,7 +49,7 @@ export const LoginSignup = () => {
     }
 
     let responseData;
-    await fetch('https://graffiti-streetwear-frontend.onrender.com/signup', {
+    await fetch('https://graffiti-streetwear-backend.onrender.com/signup', {
       method: 'POST',
       headers: {
         Accept: 'application/form-data',
