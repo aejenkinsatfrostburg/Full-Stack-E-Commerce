@@ -102,7 +102,6 @@
         height: 150px;
     }
     .productdisplay-main-img{
-        width: 610px;
         height: 610px;
         object-fit: cover;
     }
@@ -126,7 +125,6 @@
         height: 120px;
     }
     .productdisplay-main-img{
-        width: 510px;
         height: 510px;
         object-fit: cover;
     }
