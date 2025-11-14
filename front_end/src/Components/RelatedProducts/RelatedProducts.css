@@ -4,7 +4,8 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    padding-bottom: 50px;
+    height: auto;
 }
 .relatedproducts h1{
     color: #171717;
@@ -21,12 +22,11 @@
     margin-top: 30px;
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;         
+    justify-content: center; 
 }
 
 @media(max-width:1280px) {
-    .relatedproducts{
-        height: 70vh;
-    }
     .relatedproducts h1{
         font-size: 40px;
     }
@@ -42,21 +42,101 @@
     }
 }
 
-@media(max-width:800px) {
-    .relatedproducts{
-        height: 60vh;
+/* ----------------------- */
+/* --- 2000px Desktop ---- */
+/* ----------------------- */
+@media(max-width:2000px) {
+    .relatedproducts h1 {
+        font-size: 46px;
     }
-    .relatedproducts h1{
-        font-size: 30px;
+    .relatedproducts hr {
+        width: 180px;
+        height: 5px;
     }
-    .relatedproducts hr{
+    .relatedproducts-item {
+        gap: 25px;
+    }
+}
+
+
+/* ----------------------- */
+/* ---- 1280px Laptop ---- */
+/* ----------------------- */
+@media(max-width:1280px) {
+
+    .relatedproducts h1 {
+        font-size: 40px;
+    }
+    .relatedproducts hr {
         width: 150px;
-        height: 4px;
-        border-radius: 6px;
-        background: #252525;
+        height: 5px;
     }
-    .relatedproducts-item{
+    .relatedproducts-item {
+        margin-top: 20px;
+        gap: 25px;
+    }
+}
+
+
+/* ----------------------- */
+/* ------ 1024px --------- */
+/* ----------------------- */
+@media(max-width:1024px) {
+   
+    .relatedproducts h1 {
+        font-size: 32px;
+    }
+    .relatedproducts hr {
+        width: 130px;
+        height: 4px;
+    }
+    .relatedproducts-item {
+        gap: 20px;
+    }
+}
+
+
+/* ----------------------- */
+/* ------- 800px --------- */
+/* ----------------------- */
+@media(max-width:800px) {
+
+    .relatedproducts h1 {
+        font-size: 28px;
+    }
+    .relatedproducts hr {
+        width: 120px;
+        height: 4px;
+    }
+    .relatedproducts-item {
         margin-top: 0px;
-        gap: 5px;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/* ----------------------- */
+/* ------- 500px --------- */
+/* ----------------------- */
+@media(max-width:500px) {
+    .relatedproducts {
+        height: auto;
+        margin-top: 30px;
+    }
+    .relatedproducts h1 {
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .relatedproducts hr {
+        width: 100px;
+        height: 3px;
+    }
+    .relatedproducts-item {
+        gap: 12px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
