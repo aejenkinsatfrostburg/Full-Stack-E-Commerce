@@ -1,0 +1,138 @@
+.hero{ 
+    height: 90vh;
+    background: linear-gradient(180deg, #a17cd6, #ffffff 60%);
+    display: flex;
+}
+
+.hero-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 170px;
+    line-height: 1.1;
+}
+
+.hero-left h2{
+    color: #031d2c;
+    font-weight: 26px;
+    font-weight: 600;
+}
+
+.hero-left p{
+    color: #031d2c;
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.hero-latest-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 310px;
+    height: 70px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #1770AA;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600px;
+}
+
+.hero-right{
+    flex: 1;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    padding-right: 300px;
+}
+.hero-right img{
+  transform: scale(1.05);
+}
+
+@media(max-width:1280px){
+    .hero-left{
+        padding-left: 100px;
+    }
+    .hero-left h2{
+        font-size: 22px;
+    }
+    .hero-left p{
+        font-size: 60px;
+    }
+    .hero-latest-btn{
+        gap: 10px;
+        width: 250px;
+        height: 60px;
+        margin: 0px;
+        font-size: 18px;
+    }
+    .hero-right img{
+     transform: scale(1);
+    }
+}
+
+
+@media(max-width:1024px){
+    .hero-left{
+        padding-left: 80px;
+    }
+    .hero-left h2{
+        font-size: 20px;
+    }
+    .hero-left p{
+        font-size: 50px;
+    }
+    .hero-latest-btn{
+        width: 220px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .hero-right img{
+     transform: scale(0.8);
+     margin-left: -70px; /* optional: pull it slightly closer */
+    }
+}
+
+@media(max-width:800px){
+    .hero-left{
+        padding-left: 30px;
+    }
+    .hero-left h2{
+        font-size: 16px;
+    }
+    .hero-left p{
+        font-size: 40px;
+    }
+    .hero-latest-btn{
+        width: 170px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .hero-right img{
+     transform: scale(0.7);
+     margin-left: -80px;
+    }
+}
+
+@media(max-width:500px){
+    .hero{ 
+       height: 50vh;
+        background: linear-gradient(180deg, #a17cd6, #ffffff 60%);
+        display: flex;
+    }
+    .hero-left{
+        padding-left: 30px;
+    }
+    .hero-left h2{
+        font-size: 20px;
+    }
+    .hero-left p{
+        font-size: 50px;
+    }
+    .hero-right img{
+     display: none;
+    }
+}

@@ -1,0 +1,284 @@
+.navbar {
+    overflow-x: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: 0 2px 3px -3px black;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.navbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    margin-right: -25px;
+    gap: 0px;
+}
+.nav-logo img{
+    transition: 0.5s;
+    display: block; 
+    margin: 0;    
+    padding: 0; 
+    width: 300px; 
+    height: auto; 
+}
+.nav-logo a:active{
+    filter: hue-rotate(-68deg);
+}
+
+.nav-logo img:hover{
+    transition: 0.5s;
+    filter: hue-rotate(-60deg); 
+}
+
+.navbar-icons p{
+    margin: 0%;
+    padding: 0%;
+    color: black;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.icon-with-text {
+    display: flex;
+    flex-direction: column; /* stack icon and text */
+    align-items: center; /* center horizontally */
+    gap: 0px; /* space between icon and text */
+}
+
+.nav-menu{
+    color: #545454;
+    display: flex;
+    align-content: center;
+    list-style: none;
+    gap: clamp(10px, 3vw, 100px);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.nav-menu a{
+    color: inherit;
+}
+
+.nav-menu a:visited{
+    color: inherit;
+}
+
+.nav-menu a:active{
+    color: #A07bd6;
+}
+
+.nav-menu :hover{
+    color: #08212a;
+}
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.nav-menu hr{
+    border: none;
+    width: 60%;
+    height: 3px;
+    border-radius: 10px;
+    background: #156FA9;
+}
+
+.navbar-icons img{
+    transition: 0.3s;
+    width: 30px; 
+    height: auto; 
+}
+
+.navbar-icons img:hover{
+    transform: scale(1.1);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: clamp(0px, 3vw, 70px);
+    cursor: pointer;
+    padding: 20px;
+    position: relative; /* Needed for positioning the badge */
+}
+
+.cart-container {
+    position: relative; /* Badge will be positioned relative to this */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    
+}
+.nav-dropdown{
+    display: none;
+}
+
+
+
+
+
+
+
+/* Mobile Support */
+@media (max-width: 1280px) {
+   .navbar{
+    padding: 12px 50px;
+   }
+   .nav-logo img{
+    width: 200px;
+    padding: 0; 
+   }
+   .nav-menu{
+    gap: 20px;
+    font-size: 16px;
+   }
+   .navbar-icons{
+    gap: 20px;
+   }
+   .navbar-icons img{
+     width: 25px; 
+    }
+}
+
+@media (max-width: 1024px) {
+   .navbar{
+     padding: 12px 30px;
+   }
+   .nav-logo img{
+     width: 170px;
+     padding: 0; 
+   }
+   .nav-menu{
+     gap: 10px;
+     font-size: 14px;
+   }
+   .navbar-icons{
+     gap: 20px;
+   }
+   .navbar-icons img{
+     width: 25px; 
+    }
+    .nav-cart-count{
+       width: 17px;
+       height: 17px;
+       font-size: 11px;
+    }
+}
+
+@media (max-width: 800px) {
+   .navbar{
+     padding: 0px 0px;
+   }
+   
+   .nav-dropdown:hover{
+    opacity: 70%;
+   }
+   .nav-logo {
+    display: none;
+  }
+   
+   .nav-menu-visible{
+    display: flex;
+   }
+   .nav-dropdown.open{
+    transition: 0.3s;
+    transform: rotate(270deg);
+   }
+}
+
+
+@media (max-width: 500px) {
+    .nav-menu{
+    display: none;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    top: 60px;
+    left: 0px;
+   }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    padding: 0;
+    gap: 0;
+  }
+.nav-dropdown{
+    transition: 0.3s;
+    transform: rotate(180deg);
+    display: flex;
+     width: 30px;
+     padding-left: 00px;
+   }
+  .nav-menu {
+    display: none; /* toggle with JS */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw; /* use viewport width to ignore any container padding */
+    height: 180px;
+    margin: 0;    /* remove extra margin */
+    padding: 0;   /* remove padding */
+    background-color: white;
+    justify-content: center;
+    flex-direction: column; /* stack items vertically */
+    gap: 0;
+    font-size: 14px;
+  }
+  .nav-menu-visible {
+    display: flex;
+  }
+  .nav-dropdown {
+    transition: 0.3s;
+    transform: rotate(180deg);
+    display: flex;
+    width: 30px;
+    padding-left: 0;
+  }
+  .nav-dropdown.open {
+    transition: 0.3s;
+    transform: rotate(270deg);
+  }
+  .nav-menu li {
+    text-align: center; /* center links */
+    width: 100%;        /* make li full width so no extra space */
+    margin: 0;
+    padding: 10px 0;    /* optional vertical padding for touch targets */
+  }
+}
+

@@ -1,0 +1,82 @@
+.add-product{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 50px;
+    margin: 20px 30px;
+    border-radius: 6px;
+    background: white;
+}
+.addproduct-itemfield{
+    width: 100%;
+    color: #4e4e4e;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.addproduct-itemfield input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    padding-left: 15px;
+    border: 1px solid #c3c3c3;
+    outline: none;
+    color: #7b7b7b;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+.addproduct-price{
+    display: flex;
+    gap: 40px;
+}
+.add-product-selector{
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7b7b7b;
+    border: 1px solid #c3c3c3;
+    border-radius: 4px;
+}
+.addproduct-thumbnail{
+    height: 100px;
+    border-radius: 10px;
+    object-fit: contain;
+    margin: 10px 0 0 10px;
+}
+.addproduct-button{
+    margin-top: 10px;
+    width: 160px;
+    height: 50px;
+    border-radius: 6px;
+    background: #1770AA;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.addproduct-itemfield textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100px; /* taller than input for multiple lines */
+    border-radius: 4px;
+    padding: 15px;
+    border: 1px solid #c3c3c3;
+    outline: none;
+    color: #7b7b7b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    resize: vertical; /* allow user to resize vertically */
+}
+
+
+@media(max-width:800px) {
+    .add-product{
+        width: auto;
+        padding: 30px;
+        margin: 20px;
+    }
+}
