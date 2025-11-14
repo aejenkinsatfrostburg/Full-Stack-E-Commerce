@@ -185,7 +185,7 @@ app.post('/signup', async (req, res) => {
         }
     }
 
-    const token = jwt.sign(data, process.env.JWT_SECRET);
+    const token = jwt.sign(data, 'secret_ecom');
 
     res.json({success:true,token})
 })
@@ -202,7 +202,7 @@ app.post('/login', async (req, res) =>{
                     id:user.id
                 }
             }
-            const token = jwt.sign(data, process.env.JWT_SECRET);
+            const token = jwt.sign(data, 'secret_ecom');
             res.json({success:true,token});
         } 
         else {
