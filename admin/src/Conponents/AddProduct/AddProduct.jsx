@@ -6,6 +6,7 @@ const AddProduct = () => {
     // Product state stores only display URLs
     const [productDetails, setProductDetails] = useState({
         name: "",
+        description: "",
         image: "",
         side_images: [],
         category: "hoodies",
@@ -51,6 +52,7 @@ const AddProduct = () => {
                 mainForm.append('product', mainFile);
                 const mainResp = await fetch('https://graffiti-streetwear-backend.onrender.com/upload', { method: 'POST', body: mainForm });
                 const mainData = await mainResp.json();
+                console.log("DEBUG: mainData from Cloudinary:", mainData);
                 if (mainData.success) mainImageUrl = mainData.image_url;
             }
 
@@ -61,8 +63,11 @@ const AddProduct = () => {
                 sideForm.append('product', file);
                 const sideResp = await fetch('https://graffiti-streetwear-backend.onrender.com/upload', { method: 'POST', body: sideForm });
                 const sideData = await sideResp.json();
+                console.log("DEBUG: sideData from Cloudinary:", sideData);
                 if (sideData.success) sideImageUrls.push(sideData.image_url);
             }
+
+            console.log("DEBUG: Cloudinary URLs ready to send to backend:", { mainImageUrl, sideImageUrls });
 
             // Build product object
             const product = {
