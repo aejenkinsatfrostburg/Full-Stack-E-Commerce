@@ -18,6 +18,7 @@ import { useEffect } from 'react';
 
 function App() {
 
+  // Pre-load banner images
   useEffect(() => {
     [
       hoodie_banner,
