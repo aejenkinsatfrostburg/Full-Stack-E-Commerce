@@ -5,6 +5,7 @@ import { Item } from '../Components/Items/Item'
 import dropdown_icon from '../Components/IconPack/Shopicons_Regular_ArrowDown.png'
 
 export const ShopCategory = (props) => {
+  
   const { product_data } = useContext(ShopContext);
 
   // Filter products by category

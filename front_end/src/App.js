@@ -14,8 +14,21 @@ import shirt_banner from './Components/Assets/shirt_banner.png'
 import sneaker_banner from './Components/Assets/sneaker_banner.png'
 import sweatpants_banner from './Components/Assets/sweatpants_banner.png'
 import { PrivacyPolicyPage } from './Pages/PrivacyPolicyPage';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    [
+      hoodie_banner,
+      hat_banner,
+      shirt_banner,
+      sneaker_banner,
+      sweatpants_banner
+    ].forEach(src => new Image().src = src);
+  }, []);
+
+
   return (
     <div>
       <BrowserRouter>
