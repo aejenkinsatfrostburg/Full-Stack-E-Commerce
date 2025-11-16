@@ -9,9 +9,9 @@ const cors = require("cors");
 const fs = require("fs");
 const cloudinary = require("./cloudinary");
 
-
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+
 
 // Database Connection with MongoDB
 mongoose.connect("mongodb+srv://abbeyjenkins102_db_user:KingdomOfNight_73@cluster0.zbkl26x.mongodb.net/e-commerce");
