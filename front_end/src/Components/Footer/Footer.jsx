@@ -15,6 +15,7 @@ export const Footer = () => {
         <ul className="footer-links">
             <li><a href="/privacypolicy">Privacy Policy</a></li>
             <li><a href="/accessibility">Accessibility</a></li>
+            <li><a href="/sitemap">Site Map</a></li>
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/">Home</a></li>
         </ul>
