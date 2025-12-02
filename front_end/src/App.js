@@ -17,6 +17,7 @@ import { PrivacyPolicyPage } from './Pages/PrivacyPolicyPage';
 import { Accessibility } from './Pages/Accessibility';
 import { useEffect } from 'react';
 import { ContactUs } from './Pages/ContactUs';
+import { Checkout } from './Components/Checkout/Checkout.jsx';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
         <Route path='/privacypolicy' element = {<PrivacyPolicyPage/>}/>
         <Route path='/accessibility' element = {<Accessibility/>}/>
         <Route path='/contact' element = {<ContactUs/>}/>
+        <Route path='/checkout' element = {<Checkout/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

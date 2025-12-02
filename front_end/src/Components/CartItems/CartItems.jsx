@@ -4,8 +4,12 @@ import { ShopContext } from '../../Context/ShopContext';
 import remove_icon from '../IconPack/Shopicons_Regular_Close.png'
 import minus_icon from '../IconPack/Shopicons_Regular_Minus.png'
 import plus_icon from '../IconPack/Shopicons_Regular_Plus.png'
+import { useNavigate } from 'react-router-dom';
+
 
 export const CartItems = () => {
+    const navigate = useNavigate();
+
     const {getTotalCartAmount, product_data, cartItems, addToCart, removeFromCart, clearCart} = useContext(ShopContext);
     return (
         <div className='cartitems'>
@@ -57,7 +61,7 @@ export const CartItems = () => {
                             <h3>${getTotalCartAmount()}</h3>
                         </div>
                     </div>
-                    <button>PROCEED TO CHECHOUT</button>
+                    <button onClick={() => navigate('/checkout')}>PROCEED TO CHECKOUT</button>
                 </div>
                 <div className="cartitems promocode">
                     <p>If you have a promocode, enter it here</p>
