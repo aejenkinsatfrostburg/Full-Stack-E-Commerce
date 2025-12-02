@@ -18,6 +18,7 @@ import { Accessibility } from './Pages/Accessibility';
 import { useEffect } from 'react';
 import { ContactUs } from './Pages/ContactUs';
 import { Checkout } from './Components/Checkout/Checkout.jsx';
+import { SiteMap } from './Pages/SiteMap.jsx';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
         <Route path='/accessibility' element = {<Accessibility/>}/>
         <Route path='/contact' element = {<ContactUs/>}/>
         <Route path='/checkout' element = {<Checkout/>}/>
+        <Route path='/sitemap' element = {<SiteMap/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>
