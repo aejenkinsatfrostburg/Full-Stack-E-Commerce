@@ -13,24 +13,23 @@ export const Footer = () => {
             <img src={footer_logo} alt="" />
         </div>
         <ul className="footer-links">
-            <li>Company</li>
-            <li>Products</li>
-            <li>Offices</li>
-            <li>About</li>
-            <li>Contact Us</li>
+            <li><a href="/privacypolicy">Privacy Policy</a></li>
+            <li><a href="/accessibility">Accessibility</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/">Home</a></li>
         </ul>
         <div className="footer-socials-icons">
             <div className="footer-icons-container">
-                <img src={instagram_icon} alt="" />
+                <img src={instagram_icon} alt="instagram" />
             </div>
             <div className="footer-icons-container">
-                <img src={facebook_icon} alt="" />
+                <img src={facebook_icon} alt="facebook" />
             </div>
             <div className="footer-icons-container">
-                <img src={linkedIn_icon} alt="" />
+                <img src={linkedIn_icon} alt="linkedin" />
             </div>
             <div className="footer-icons-container">
-                <img src={youtube_icon} alt="" />
+                <img src={youtube_icon} alt="youtube" />
             </div>
         </div>
         <div className="footer-copyright">

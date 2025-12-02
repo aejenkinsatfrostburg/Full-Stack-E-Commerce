@@ -14,7 +14,9 @@ import shirt_banner from './Components/Assets/shirt_banner.png'
 import sneaker_banner from './Components/Assets/sneaker_banner.png'
 import sweatpants_banner from './Components/Assets/sweatpants_banner.png'
 import { PrivacyPolicyPage } from './Pages/PrivacyPolicyPage';
+import { Accessibility } from './Pages/Accessibility';
 import { useEffect } from 'react';
+import { ContactUs } from './Pages/ContactUs';
 
 function App() {
 
@@ -48,6 +50,8 @@ function App() {
         <Route path='/saved' element = {<Saved/>}/>
         <Route path='/login' element = {<LoginSignup/>}/>
         <Route path='/privacypolicy' element = {<PrivacyPolicyPage/>}/>
+        <Route path='/accessibility' element = {<Accessibility/>}/>
+        <Route path='/contact' element = {<ContactUs/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>
