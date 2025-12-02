@@ -210,6 +210,7 @@
    
    .nav-menu-visible{
     display: flex;
+    z-index: 1000;
    }
    .nav-dropdown.open{
     transition: 0.3s;
